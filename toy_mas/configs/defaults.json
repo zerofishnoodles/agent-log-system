@@ -1,0 +1,16 @@
+{
+  "agent": {
+    "model": "gpt-4o-mini",
+    "temperature": 0.7,
+    "max_tokens": 1000
+  },
+  "workflow": {
+    "max_steps": 10,
+    "max_retries": 3
+  },
+  "prompts": {
+    "hello_world": "Generate a simple Python 'Hello World' program. Make sure the code is syntactically correct and executable.",
+    "verifier": "Review the generated code and verify it meets the requirements. Respond with 'APPROVED' if correct, 'REJECTED' if not."
+  }
+}
+
