@@ -1,0 +1,7 @@
+[
+  "SELECT p.Description \nFROM transactions_1k t \nJOIN yearmonth y ON t.CustomerID = y.CustomerID \nJOIN products p ON t.ProductID = p.ProductID \nWHERE y.Date BETWEEN '2013-09-01' AND '2013-09-30'",
+  "SELECT T2.Description \nFROM transactions_1k AS T1 \nINNER JOIN products AS T2 \nON T1.ProductID = T2.ProductID \nINNER JOIN yearmonth AS T3 \nON T1.CustomerID = T3.CustomerID \nWHERE T3.Date BETWEEN '2013-09-01' AND '2013-09-30';",
+  "SELECT p.Description \nFROM products p \nJOIN transactions_1k t ON p.ProductID = t.ProductID \nJOIN yearmonth y ON t.CustomerID = y.CustomerID \nWHERE y.Date LIKE '%-09-2013%'",
+  "SELECT T3.Description \nFROM transactions_1k AS T1 \nJOIN yearmonth AS T2 ON T1.CustomerID = T2.CustomerID \nJOIN products AS T3 ON T1.ProductID = T3.ProductID \nWHERE T2.Date LIKE '%/%/2013' AND T2.Date LIKE '%/%/09%'",
+  "SELECT P.Description \nFROM transactions_1k AS T \nINNER JOIN yearmonth AS Y ON T.CustomerID = Y.CustomerID \nINNER JOIN products AS P ON T.ProductID = P.ProductID \nWHERE Y.Date LIKE '%/%/2013' AND Y.Date LIKE '%/%/09'"
+]

@@ -1,0 +1,7 @@
+[
+  "SELECT SUM(C.Consumption) \nFROM yearmonth C \nWHERE C.CustomerID = 6 AND EXTRACT(MONTH FROM C.Date) BETWEEN 8 AND 11 AND EXTRACT(YEAR FROM C.Date) = 2013",
+  "SELECT SUM(c.Consumption) FROM yearmonth c WHERE c.CustomerID = 6 AND c.Date >= '2013-08-01' AND c.Date <= '2013-11-30'",
+  "SELECT SUM(T2.Consumption) FROM transactions_1k AS T1 \nINNER JOIN yearmonth AS T2 ON T1.CustomerID = T2.CustomerID \nWHERE T1.CustomerID = 6 AND MONTH(T1.Date) BETWEEN 8 AND 11 AND YEAR(T1.Date) = 2013",
+  "SELECT SUM(T2.Consumption) \nFROM yearmonth AS T2 \nINNER JOIN transactions_1k AS T1 \nON T2.CustomerID = T1.CustomerID \nWHERE T2.CustomerID = 6 AND T2.Date BETWEEN '2013-08-01' AND '2013-11-30'",
+  "SELECT SUM(C.Consumption) \nFROM yearmonth C \nWHERE C.Date BETWEEN '2013-08-01' AND '2013-11-30' AND C.CustomerID = 6"
+]

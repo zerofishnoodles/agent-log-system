@@ -1,0 +1,7 @@
+[
+  "SELECT SUM(CASE WHEN T1.Country = 'Czech Republic' THEN 1 ELSE 0 END) - SUM(CASE WHEN T1.Country = 'Slovakia' THEN 1 ELSE 0 END) AS Difference \nFROM gasstations AS T1 \nJOIN customers AS T2 ON T1.ChainID = T2.CustomerID WHERE T1.Segment = 'discount'",
+  "SELECT SUM(CASE WHEN T1.Country = 'Czech Republic' THEN 1 ELSE 0 END) - SUM(CASE WHEN T1.Country = 'Slovakia' THEN 1 ELSE 0 END) AS Difference \nFROM gasstations AS T1 \nJOIN customers AS T2 ON T1.ChainID = T2.CustomerID",
+  "SELECT SUM(CASE WHEN T1.Country = 'Czech Republic' THEN 1 ELSE 0 END) - SUM(CASE WHEN T1.Country = 'Slovakia' THEN 1 ELSE 0 END) AS Difference FROM gasstations AS T1 JOIN customers AS T2 ON T1.Segment = T2.Segment",
+  "SELECT SUM(CASE WHEN Country = 'Czech Republic' THEN 1 ELSE 0 END) - SUM(CASE WHEN Country = 'Slovakia' THEN 1 ELSE 0 END) FROM gasstations WHERE Segment = 'discount'",
+  "SELECT SUM(CASE WHEN T1.Country = 'Czech Republic' THEN 1 ELSE 0 END) - SUM(CASE WHEN T1.Country = 'Slovakia' THEN 1 ELSE 0 END) AS diff FROM gasstations AS T1 INNER JOIN customers AS T2 ON T1.ChainID = T2.CustomerID WHERE T2.Segment = 'discount'"
+]

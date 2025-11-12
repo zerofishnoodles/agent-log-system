@@ -1,0 +1,7 @@
+[
+  "SELECT MAX(Consumption) FROM yearmonth WHERE Date LIKE '%/%/2012'",
+  "SELECT MAX(Consumption) FROM yearmonth WHERE Date LIKE '%/%/2012'",
+  "SELECT MAX(T2.Consumption) FROM yearmonth AS T2 INNER JOIN transactions_1k AS T1 ON T2.CustomerID = T1.CustomerID AND YEAR(T2.Date) = 2012",
+  "SELECT MAX(Consumption) FROM yearmonth WHERE Date LIKE '2012%'",
+  "SELECT MAX(C.Consumption) FROM yearmonth C WHERE YEAR(C.Date) = 2012"
+]

@@ -1,0 +1,7 @@
+[
+  "SELECT MAX(T2.Consumption) ,  T1.Date \nFROM yearmonth AS T1 \nJOIN customers AS T2 \nON T1.CustomerID = T2.CustomerID \nWHERE T1.Date LIKE '%/%/13' \nAND T2.Segment = 'SME';",
+  "SELECT MAX(T1.Consumption) , T2.Date \nFROM yearmonth AS T1 \nJOIN transactions_1k AS T2 ON T1.CustomerID = T2.CustomerID \nJOIN customers AS T3 ON T3.CustomerID = T2.CustomerID \nWHERE T3.Segment = 'SME' AND YEAR(T2.Date) = 2013",
+  "SELECT MAX(C.Consumption) , DATE_FORMAT(YM.Date, '%Y-%m') \nFROM yearmonth YM \nJOIN customers C \nON YM.CustomerID = C.CustomerID \nWHERE C.Segment = 'SME' AND YEAR(YM.Date) = 2013",
+  "SELECT MAX(Consumption) , YEARmonth.Date \nFROM yearmonth \nJOIN customers ON yearmonth.CustomerID = customers.CustomerID \nWHERE customers.Segment = 'SME' AND YEAR(yearmonth.Date) = 2013",
+  "SELECT MAX(T1.Consumption) ,  YEAR(T1.Date) ,  MONTH(T1.Date) \nFROM yearmonth AS T1 \nJOIN customers AS T2 ON T1.CustomerID = T2.CustomerID \nWHERE T2.Segment = 'SME' AND YEAR(T1.Date) = 2013"
+]

@@ -1,0 +1,5 @@
+{
+  "sample_1": "../data/sample_db.duckdb",
+  "sample_2": "../data/sample_db2.duckdb",
+  "sample_3": "../data/sample_db3.duckdb"
+}

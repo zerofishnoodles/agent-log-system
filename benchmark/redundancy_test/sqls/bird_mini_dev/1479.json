@@ -1,0 +1,7 @@
+[
+  "SELECT EXTRACT(YEAR FROM t.Date) AS Year, SUM(t.Consumption) AS Total_Consumption FROM yearmonth t WHERE t.Currency = 'CZK' GROUP BY EXTRACT(YEAR FROM t.Date) ORDER BY Total_Consumption DESC LIMIT 1",
+  "SELECT YEAR(Date) AS Year, SUM(Consumption) AS Total_Consumption FROM transactions_1k JOIN customers ON transactions_1k.CustomerID = customers.CustomerID WHERE Currency = 'CZK' GROUP BY YEAR(Date) ORDER BY Total_Consumption DESC LIMIT 1",
+  "SELECT YEAR(d.Date) AS Consumed_Year \nFROM transactions_1k t \nJOIN yearmonth y ON t.CustomerID = y.CustomerID AND t.Date = y.Date \nWHERE Currency = 'CZK' \nGROUP BY YEAR(d.Date) \nORDER BY SUM(y.Consumption) DESC \nLIMIT 1;",
+  "SELECT YEAR(y.Date) AS Year, SUM(t.Amount) AS TotalConsumption \nFROM yearmonth y \nJOIN transactions_1k t ON y.CustomerID = t.CustomerID AND y.Date = t.Date \nWHERE Currency = 'CZK' GROUP BY YEAR(y.Date) ORDER BY TotalConsumption DESC LIMIT 1",
+  "SELECT EXTRACT(YEAR FROM y.Date) AS Year \nFROM yearmonth y JOIN transactions_1k t ON y.CustomerID = t.CustomerID \nWHERE t.Currency = 'CZK' GROUP BY EXTRACT(YEAR FROM y.Date) ORDER BY SUM(y.Consumption) DESC LIMIT 1"
+]

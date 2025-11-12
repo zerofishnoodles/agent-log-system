@@ -1,0 +1,25 @@
+{
+  "operator_type": "AGGREGATE",
+  "children": [
+    {
+      "operator_type": "DISTINCT",
+      "children": []
+    },
+    {
+      "operator_type": "PROJECTION",
+      "children": []
+    },
+    {
+      "operator_type": "HASH_JOIN",
+      "children": []
+    },
+    {
+      "operator_type": "PROJECTION",
+      "children": []
+    },
+    {
+      "operator_type": "FILTER",
+      "children": []
+    }
+  ]
+}

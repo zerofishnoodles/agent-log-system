@@ -1,0 +1,24 @@
+{
+  "qid": "1472",
+  "total": 10,
+  "unique": 2,
+  "redundancy": 0.8,
+  "successful_plans": 2,
+  "total_sqls": 5,
+  "by_size": {
+    "5": {
+      "total": 2,
+      "unique": 1
+    },
+    "1": {
+      "total": 8,
+      "unique": 1
+    }
+  },
+  "by_op": {
+    "OT": {
+      "total": 10,
+      "unique": 2
+    }
+  }
+}

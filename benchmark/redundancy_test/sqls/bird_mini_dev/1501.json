@@ -1,0 +1,7 @@
+[
+  "SELECT T1.Country \nFROM gasstations AS T1 \nJOIN transactions_1k AS T2 \nON T1.GasStationID = T2.GasStationID \nWHERE YEAR(T2.Date) = 2013 AND MONTH(T2.Date) = 6",
+  "SELECT T2.Country \nFROM transactions_1k AS T1 \nJOIN gasstations AS T2 \nON T1.GasStationID = T2.GasStationID \nWHERE EXTRACT(YEAR FROM T1.Date) = 2013 AND EXTRACT(MONTH FROM T1.Date) = 6",
+  "SELECT g.Country \nFROM transactions_1k t \nJOIN gasstations g ON t.GasStationID = g.GasStationID \nWHERE EXTRACT(YEAR FROM t.Date) = 2013 \nAND EXTRACT(MONTH FROM t.Date) = 6",
+  "SELECT DISTINCT t1.Country \nFROM gasstations t1 \nJOIN transactions_1k t2 ON t1.GasStationID = t2.GasStationID \nWHERE EXTRACT(YEAR FROM t2.Date) = 2013 AND EXTRACT(MONTH FROM t2.Date) = 6",
+  "SELECT DISTINCT T1.Country \nFROM gasstations AS T1 \nJOIN transactions_1k AS T2 \nON T1.GasStationID = T2.GasStationID \nWHERE YEAR(T2.Date) = 2013 AND MONTH(T2.Date) = 6"
+]

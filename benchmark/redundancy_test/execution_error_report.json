@@ -1,0 +1,52 @@
+{
+  "total_questions": 10,
+  "questions_processed": 10,
+  "total_sqls": 20,
+  "total_successful": 10,
+  "total_execution_errors": 10,
+  "questions_with_errors": 7,
+  "execution_error_summary": [
+    {
+      "question_id": "1471",
+      "execution_errors": 1,
+      "total_sqls": 2,
+      "error_rate": 0.5
+    },
+    {
+      "question_id": "1472",
+      "execution_errors": 1,
+      "total_sqls": 2,
+      "error_rate": 0.5
+    },
+    {
+      "question_id": "1479",
+      "execution_errors": 2,
+      "total_sqls": 2,
+      "error_rate": 1.0
+    },
+    {
+      "question_id": "1480",
+      "execution_errors": 2,
+      "total_sqls": 2,
+      "error_rate": 1.0
+    },
+    {
+      "question_id": "1481",
+      "execution_errors": 1,
+      "total_sqls": 2,
+      "error_rate": 0.5
+    },
+    {
+      "question_id": "1482",
+      "execution_errors": 2,
+      "total_sqls": 2,
+      "error_rate": 1.0
+    },
+    {
+      "question_id": "1483",
+      "execution_errors": 1,
+      "total_sqls": 2,
+      "error_rate": 0.5
+    }
+  ]
+}

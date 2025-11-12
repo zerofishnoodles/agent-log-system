@@ -1,0 +1,7 @@
+[
+  "SELECT COUNT(T1.TransactionID) \nFROM transactions_1k AS T1 \nINNER JOIN gasstations AS T2 \nON T1.GasStationID = T2.GasStationID \nWHERE T2.Country = 'Czech Republic' AND T1.Date > '2012-01-01';",
+  "SELECT COUNT(*) \nFROM transactions_1k \nJOIN gasstations ON transactions_1k.GasStationID = gasstations.GasStationID \nWHERE gasstations.Country = 'Czech Republic' AND transactions_1k.Date > '2012-01-01';",
+  "SELECT COUNT(T1.TransactionID) \nFROM transactions_1k AS T1 \nINNER JOIN gasstations AS T2 ON T1.GasStationID = T2.GasStationID \nWHERE T2.Country = 'Czech Republic' AND T1.Date > '2012-01-01'",
+  "SELECT COUNT(T1.TransactionID) \nFROM transactions_1k AS T1 \nINNER JOIN gasstations AS T2 ON T1.GasStationID = T2.GasStationID \nWHERE T2.Country = 'Czech Republic' AND T1.Date > '2012-01-01'",
+  "SELECT COUNT(T1.TransactionID) \nFROM transactions_1k AS T1 \nJOIN gasstations AS T2 ON T1.GasStationID = T2.GasStationID \nWHERE T2.Country = 'Czech Republic' AND CAST(T1.Date AS DATE) > '2012-01-01';"
+]

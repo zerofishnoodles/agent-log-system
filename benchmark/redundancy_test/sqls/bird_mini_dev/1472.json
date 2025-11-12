@@ -1,0 +1,7 @@
+[
+  "SELECT c.CustomerID FROM customers c JOIN yearmonth y ON c.CustomerID = y.CustomerID WHERE YEAR(y.Date) = 2012 AND c.Country = 'LAM' ORDER BY y.Consumption LIMIT 1",
+  "SELECT c.CustomerID \nFROM customers c \nJOIN yearmonth y ON c.CustomerID = y.CustomerID \nWHERE y.Date LIKE '2012%' \nAND c.Currency = 'LAM' \nORDER BY y.Consumption ASC \nLIMIT 1;",
+  "SELECT c.CustomerID FROM customers c INNER JOIN yearmonth y ON c.CustomerID = y.CustomerID WHERE y.Date BETWEEN '2012-01-01' AND '2012-12-31' AND c.Currency = 'LAM' ORDER BY y.Consumption ASC LIMIT 1",
+  "SELECT c.CustomerID FROM customers c JOIN yearmonth y ON c.CustomerID = y.CustomerID WHERE y.Date LIKE '2012%' AND c.Country = 'LAM' ORDER BY y.Consumption ASC LIMIT 1",
+  "SELECT c.CustomerID, c.Name, ym.Consumption \nFROM customers c \nJOIN yearmonth ym ON c.CustomerID = ym.CustomerID \nWHERE ym.Date LIKE '%2012%' AND c.Segment = 'LAM' \nORDER BY ym.Consumption ASC \nLIMIT 1"
+]

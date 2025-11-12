@@ -1,0 +1,7 @@
+[
+  "SELECT CASE \n    WHEN SUM(IIF(Segment = 'SME' AND Currency = 'CZK', 1, 0)) > \n         SUM(IIF(Segment = 'SME' AND Currency = 'EUR', 1, 0)) THEN \n         SUM(IIF(Segment = 'SME' AND Currency = 'CZK', 1, 0)) - \n         SUM(IIF(Segment = 'SME' AND Currency = 'EUR', 1, 0))\n    ELSE 0 END",
+  "SELECT SUM(CASE WHEN t1.Currency = 'CZK' AND t1.Segment = 'SME' THEN 1 ELSE 0 END) - \n       SUM(CASE WHEN t1.Currency = 'EUR' AND t1.Segment = 'SME' THEN 1 ELSE 0 END) AS Difference \nFROM customers t1",
+  "SELECT SUM(CASE WHEN T1.Currency = 'CZK' THEN 1 ELSE 0 END) - SUM(CASE WHEN T1.Currency = 'EUR' THEN 1 ELSE 0 END) FROM customers AS T1 INNER JOIN transactions_1k AS T2 ON T1.CustomerID = T2.CustomerID WHERE T1.Segment = 'SME'",
+  "SELECT COUNT(CASE WHEN c.Currency = 'CZK' THEN 1 END) - COUNT(CASE WHEN c.Currency = 'EUR' THEN 1 END) FROM customers c",
+  "SELECT SUM(CASE WHEN T1.Currency = 'CZK' AND T2.Segment = 'SME' THEN 1 ELSE 0 END) - SUM(CASE WHEN T1.Currency = 'EUR' AND T2.Segment = 'SME' THEN 1 ELSE 0 END) AS Diff \nFROM customers T1 \nJOIN gasstations T2 ON T1.CustomerID = T2.CustomerID"
+]

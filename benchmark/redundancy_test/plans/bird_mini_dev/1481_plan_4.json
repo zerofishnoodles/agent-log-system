@@ -1,0 +1,53 @@
+{
+  "operator_type": "PROJECTION",
+  "children": [
+    {
+      "operator_type": "PROJECTION",
+      "children": []
+    },
+    {
+      "operator_type": "PROJECTION",
+      "children": []
+    },
+    {
+      "operator_type": "PROJECTION",
+      "children": []
+    },
+    {
+      "operator_type": "PROJECTION",
+      "children": []
+    },
+    {
+      "operator_type": "PROJECTION",
+      "children": []
+    },
+    {
+      "operator_type": "PROJECTION",
+      "children": []
+    },
+    {
+      "operator_type": "PROJECTION",
+      "children": []
+    },
+    {
+      "operator_type": "PROJECTION",
+      "children": []
+    },
+    {
+      "operator_type": "PROJECTION",
+      "children": []
+    },
+    {
+      "operator_type": "PROJECTION",
+      "children": []
+    },
+    {
+      "operator_type": "PROJECTION",
+      "children": []
+    },
+    {
+      "operator_type": "FILTER",
+      "children": []
+    }
+  ]
+}

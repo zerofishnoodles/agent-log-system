@@ -1,0 +1,7 @@
+[
+  "SELECT AVG(Consumption) FROM yearmonth \nWHERE CustomerID IN (SELECT CustomerID FROM customers WHERE Segment = 'SME') \nAND Date LIKE '2013%'",
+  "SELECT AVG(Consumption) FROM yearmonth WHERE CustomerID IN (SELECT CustomerID FROM customers WHERE Segment = 'SME') AND Date LIKE '2013%'",
+  "SELECT AVG(C.Consumption) \nFROM yearmonth C \nJOIN transactions_1k T ON C.CustomerID = T.CustomerID \nWHERE C.Date LIKE '2013%' AND T.GasStationID IN (SELECT GasStationID FROM gasstations WHERE Segment = 'SME')",
+  "SELECT AVG(T2.Consumption) \nFROM yearmonth AS T2 \nINNER JOIN customers AS T1 ON T1.CustomerID = T2.CustomerID \nWHERE T2.Date LIKE '2013-%' AND T1.Segment = 'SME'",
+  "SELECT AVG(C.Consumption) \nFROM yearmonth C \nJOIN customers G ON C.CustomerID = G.CustomerID \nWHERE C.Date >= '2013-01-01' AND C.Date < '2014-01-01' AND G.Segment = 'SME'"
+]
